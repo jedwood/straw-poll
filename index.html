@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Straw Poll</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" media="screen, projection" href="styles/screen.css">
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+
+    <h1 class="text-center hidden-xs hidden-sm">straw poll</h1>
+    <div id="bignumbers" class="row"></div>
+    <script id="bignumbers_tpl" type="text/ractive">
+      <h1 class="total text-center">votes: {{total}}</h1>{{#unless total == 0}}
+      <div class="col-sm-12 text-center fade {{ (resultsVisible) ? '' : 'in' }}"><a href="#" on-click="showResults">show results</a></div>{{/unless}}
+      {{#if resultsVisible}}
+      <div class="col-sm-3 text-center">
+        <h2>{{a}}</h2>{{#unless total == 0}}
+        <h1 class="biggie">{{Math.round(a/total*100)}} %</h1>{{/unless}}
+      </div>
+      <div class="col-sm-3 text-center">
+        <h2>{{b}}</h2>{{#unless total == 0}}
+        <h1 class="biggie">{{Math.round(b/total*100)}} %</h1>{{/unless}}
+      </div>
+      <div class="col-sm-3 text-center">
+        <h2>{{c}}</h2>{{#unless total == 0}}
+        <h1 class="biggie">{{Math.round(c/total*100)}} %</h1>{{/unless}}
+      </div>
+      <div class="col-sm-3 text-center">
+        <h2>{{d}}</h2>{{#unless total == 0}}
+        <h1 class="biggie">{{Math.round(d/total*100)}} %</h1>{{/unless}}
+      </div>{{/if}}
+    </script>
+
+    <script src="http://cdn.ractivejs.org/latest/ractive.min.js"></script>
+    <script src="https://cdn.pubnub.com/pubnub.min.js"></script>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>

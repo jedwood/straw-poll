@@ -1,0 +1,36 @@
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  padding: 0 30px;
+  color: #999;
+  text-rendering: optimizeLegibility;
+  background: #fff;
+}
+a {
+  text-decoration: underline;
+  font-size: 18px;
+}
+.fg-light {
+  color: #aaa;
+}
+h1 {
+  font-size: 36px;
+  color: #999;
+  font-weight: 300;
+  margin: 20px auto;
+}
+h1.biggie {
+  font-size: 64px;
+  font-weight: 600;
+  color: #0e3f72;
+}
+.total {
+  color: #0e3f72;
+}
+h2 {
+  font-size: 36px;
+  font-weight: 300;
+}
+h3 {
+  font-size: 24px;
+  font-weight: 300;
+}
